@@ -75,5 +75,18 @@
 - 1. users
 - 2. posts
 - 3. comments
+- 1. users : 
+- ```js
+    dslkfjdsf
+- ```
 
+7. Assumptions that you should make while creating the schema for linkedin :~
+- User should have firstname,lastname, gender, age, skills etc fields.
+- The User should be able to view or edit his personal information.
+- Users should be able to store or manage Skills, Education, Companies.
+- A user may send a Connection request to other users. unless the recipient approves the connection request, the sender will just be a follower. once the connection request is accepted, both sender and recipient become followers of each other.
+- A user should be able to write a Post.
+- A user should be able to Comment on a post or reply to a comment.
+- A user should be able to Like a post or a comment.
+- Author of the post should be able to delete the comments
 
