@@ -35,9 +35,45 @@
 - iii. description
 - iv. hash tags
 - v. author
-- vi. comments
+- vi. comment_text
 - vii. comment_autor
-- viii. comment_date
+- viii. comment_created_at
 - ix. post_creation_date
 
-- Here you will choose linking over the embedding beacuase a post might have 1000s of comments which may exceed the 16MB limit per document of MongoDB.
+- Here you will choose linking over the embedding beacuase a post might have 1000s of comments which may exceed the 16MB limit per document of MongoDB., so it is not preferable to embedding the comments with the post details
+- So you will create 2 collections namely 
+- 1. post
+- 2. comments
+-  We will link them throuh a foregin key
+
+- 5. Blog Post Document
+```js
+  {
+    _id: 1,
+    title:"",
+    subtitle:"",
+    description:"",
+    hashtags:"",
+    author:"",
+    created_at:""
+  }
+```
+- Comment document with foreign keys
+```js
+  {
+    blog_id: 1
+    comment_text:"",
+    comment_author:"",
+    comment_created_at:""
+  }
+```
+- NOTE : We can also consider bucketing to prevent the scenarios like if we have 1000 comments on a blog post, we would need to retrieve all 1000 documents causing a lot of reads from the database.
+- Bucketing will also help a lot if we want pagination in the comment section
+
+6. Requirement documents for designing a system like Linkedin
+- We have to create many documents for a system like linkdin
+- 1. users
+- 2. posts
+- 3. comments
+
+
