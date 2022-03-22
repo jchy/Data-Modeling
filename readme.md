@@ -75,18 +75,99 @@
 - 1. users
 - 2. posts
 - 3. comments
-- 1. users : 
-- ```js
-    dslkfjdsf
-- ```
+- 4. post_likes
+- 5. skills
+
+- 1. users document :~
+```js
+ {
+    _id:"",
+    first_name:"",
+    last_name:"",
+    date_of_birth:"",
+    gender:"",
+    type: "student || recruiter"
+    workingat:"",
+    experience: [
+    {
+     job_title:"",
+     start_time:"",
+     end_time:"",
+     postitoin:""
+    }
+    ]
+    education : [
+    {
+      school_name:"",
+      duration:"",
+      role:""
+    }]
+  }
+ ```
+ - 2. posts document :~
+ ```js
+  {
+    user_id:"",
+    title:"",
+    subtitle:"",
+    description:"",
+    createdAt:"ISO_date()",
+  }
+ ```
+ - 3. comments document :~
+ ```js
+  {
+    post_id:"",
+    comment_author:"",
+    comment_created_Date:"",
+    comment_text:""
+   }
+ ```
+ 
+ - 4. post_likes document :~
+ ```js
+    {
+      post_id:"",
+      users_who_like_the_post:[
+      {
+        user_1_id
+       },
+      {
+       user_2_id
+       }
+      ]
+    }
+ ```
+ - 5. skills document :~
+ ```js
+    {
+      user_id:"",
+      skill_name:[
+      {
+        blogger
+       },
+       {
+        coder
+       }
+       ]
+     }
+ ```
 
 7. Assumptions that you should make while creating the schema for linkedin :~
 - User should have firstname,lastname, gender, age, skills etc fields.
 - The User should be able to view or edit his personal information.
 - Users should be able to store or manage Skills, Education, Companies.
-- A user may send a Connection request to other users. unless the recipient approves the connection request, the sender will just be a follower. once the connection request is accepted, both sender and recipient become followers of each other.
 - A user should be able to write a Post.
 - A user should be able to Comment on a post or reply to a comment.
 - A user should be able to Like a post or a comment.
 - Author of the post should be able to delete the comments
+
+8. 
+- list top 10 posts by users
+- display most recent post by user
+- most liked post by user
+- list down the expreince of user
+- get all user with name starting from albert
+- list top 10 companies in tech
+- list top 10 posts by a particular recruiter on linkdin
 
