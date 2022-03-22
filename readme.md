@@ -86,7 +86,7 @@
     last_name:"",
     date_of_birth:"",
     gender:"",
-    type: "student || recruiter"
+    type: "student || recruiter || organisation"
     workingat:"",
     experience: [
     {
@@ -155,12 +155,16 @@
 
 7. Assumptions that you should make while creating the schema for linkedin :~
 - User should have firstname,lastname, gender, age, skills etc fields.
+- A user may be a student or recruiter or organistaion
 - The User should be able to view or edit his personal information.
 - Users should be able to store or manage Skills, Education, Companies.
 - A user should be able to write a Post.
 - A user should be able to Comment on a post or reply to a comment.
 - A user should be able to Like a post or a comment.
 - Author of the post should be able to delete the comments
+- A recruiter should be able to post a job
+- users should be albe to comment on job
+- I have assumed that user will be able to post a job, posts, blogs depending upon the type of the user.
 
 8. 
 - list top 10 posts by users
